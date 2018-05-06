@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.manager.SelectServerController">
+   <children>
+      <Button fx:id="selectServer" layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#addCategory" prefHeight="35.0" prefWidth="180.0" text="Select Server">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="serverSelector" layoutX="10.0" layoutY="14.0" prefHeight="35.0" prefWidth="180.0" />
+   </children>
+</AnchorPane>

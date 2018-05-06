@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.OrdersTabController">
+   <children>
+      <BarChart fx:id="barChartLeft" layoutX="51.0" layoutY="51.0" prefHeight="660.0" prefWidth="569.0">
+        <xAxis>
+          <CategoryAxis fx:id="leftXAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="leftYAxis" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="barChartRight" layoutX="661.0" layoutY="51.0" prefHeight="660.0" prefWidth="569.0">
+         <xAxis>
+            <CategoryAxis fx:id="rightXAxis" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="rightYAxis" side="LEFT" />
+         </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

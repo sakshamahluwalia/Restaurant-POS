@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="cookGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CookController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.0" minWidth="10.0" prefWidth="279.1225891113281" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
+    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="724.0" minWidth="10.0" prefWidth="724.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="503.0" minWidth="10.0" prefWidth="39.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="503.0" minWidth="10.0" prefWidth="39.0" />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints fillHeight="false" maxHeight="28.0" minHeight="28.0" prefHeight="28.0" valignment="TOP" vgrow="NEVER" />
+      <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" valignment="TOP" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="33.0" minHeight="33.0" prefHeight="33.0" valignment="TOP" vgrow="NEVER" />
+    <RowConstraints maxHeight="33.0" minHeight="33.0" prefHeight="33.0" valignment="TOP" vgrow="NEVER" />
+      <RowConstraints maxHeight="33.0" minHeight="33.0" prefHeight="33.0" valignment="TOP" vgrow="NEVER" />
+    <RowConstraints maxHeight="131.8541717529297" minHeight="33.0" prefHeight="113.72845458984375" valignment="TOP" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="296.16526794433594" minHeight="10.0" prefHeight="147.27154541015625" valignment="TOP" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="296.16526794433594" minHeight="10.0" prefHeight="68.73855590820312" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <ListView fx:id="ordersList" onMouseClicked="#loadOrderSelected" prefHeight="500.0" prefWidth="800.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.rowSpan="7" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS" />
+      <MenuBar fx:id="menuBar" GridPane.columnSpan="4">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#logOut" text="Sign Out" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label prefHeight="41.0" prefWidth="235.0" text="Order Selected" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" top="7.0" />
+         </padding>
+      </Label>
+      <Label prefHeight="30.0" prefWidth="272.0" text="Server" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label prefHeight="30.0" prefWidth="272.0" text="Table" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label prefHeight="30.0" prefWidth="272.0" text="Menu Item" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label prefHeight="30.0" prefWidth="272.0" text="Add-ons" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label prefHeight="30.0" prefWidth="272.0" text="Notes" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <TextArea fx:id="serverName" editable="false" focusTraversable="false" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="200.0" promptText="N/A" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+      </TextArea>
+      <TextArea fx:id="tableId" editable="false" focusTraversable="false" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="175.0" promptText="N/A" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="menuItem" editable="false" focusTraversable="false" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="175.0" promptText="N/A" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="addOns" editable="false" focusTraversable="false" maxHeight="127.0" minHeight="110.0" prefHeight="127.0" prefWidth="724.0" promptText="N/A" GridPane.columnIndex="2" GridPane.rowIndex="5">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="notes" editable="false" focusTraversable="false" maxHeight="277.0" minHeight="30.0" prefHeight="277.0" prefWidth="724.0" promptText="N/A" GridPane.columnIndex="2" GridPane.rowIndex="6">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextArea>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <children>
+            <Button fx:id="completeOrder" contentDisplay="CENTER" layoutX="445.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#completeOrder" prefHeight="88.0" prefWidth="279.0" text="Complete Order" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="seenOrder" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#seenOrder" prefHeight="88.0" prefWidth="279.0" text="Order Seen">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</GridPane>

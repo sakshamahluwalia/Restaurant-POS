@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BillController">
+    <children>
+        <TableView fx:id="billTableView" layoutX="22.0" layoutY="57.0" prefHeight="457.0" prefWidth="489.0">
+            <columns>
+                <TableColumn fx:id="customerNum" prefWidth="77.0" text="Customer" />
+                <TableColumn fx:id="itemInfo" prefWidth="244.0" text="Item Info" />
+                <TableColumn fx:id="quantity" minWidth="0.0" prefWidth="72.0" text="Quantity" />
+                <TableColumn fx:id="price" prefWidth="97.0" text="Price" />
+            </columns>
+        </TableView>
+        <Button fx:id="payButton" layoutX="527.0" layoutY="488.0" mnemonicParsing="false" onMouseClicked="#payButton" prefHeight="60.0" prefWidth="370.0" text="PAY" />
+        <Text fx:id="tableText" layoutX="22.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TABLE # ">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font></Text>
+        <Button fx:id="addToReceipt" layoutX="308.0" layoutY="573.0" mnemonicParsing="false" onMouseClicked="#addToReceipt" prefHeight="52.0" prefWidth="203.0" text="ADD TO RECEIPT" />
+        <TableView fx:id="receiptView" layoutX="527.0" layoutY="57.0" prefHeight="305.0" prefWidth="370.0">
+            <columns>
+                <TableColumn fx:id="itemInfoReceipt" prefWidth="245.0" text="ItemInfo" />
+                <TableColumn fx:id="quantityInfoReceipt" minWidth="4.0" prefWidth="77.0" text="Quantity" />
+                <TableColumn fx:id="priceReceipt" minWidth="4.0" prefWidth="47.0" text="Price" />
+            </columns>
+        </TableView>
+        <Button fx:id="orderBackBtn" layoutX="30.0" layoutY="572.0" mnemonicParsing="false" onMouseClicked="#backOrderBtn" prefHeight="52.0" prefWidth="203.0" text="MOVE ORDER BACK" textAlignment="CENTER" wrapText="true" />
+        <Label fx:id="tableTotal" layoutX="446.0" layoutY="532.0" text="0.00">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="receiptTotal" layoutX="798.0" layoutY="440.0" text="0.00">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Text fx:id="tableText1" layoutX="526.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RECEIPT">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Text>
+        <Label fx:id="tableTotal1" layoutX="348.0" layoutY="532.0" text="TOTAL:">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="tableTotal11" layoutX="527.0" layoutY="439.0" text="TOTAL:">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="tableTotal111" layoutX="527.0" layoutY="369.0" text="Gratuity:">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="tableTotal1111" layoutX="527.0" layoutY="403.0" text="Tax:">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Text fx:id="tableNumText" layoutX="477.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#" wrappingWidth="38.109375">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Text>
+        <Label fx:id="taxOutLabel" layoutX="844.0" layoutY="403.0" text="0.00" textAlignment="RIGHT">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="gratuityOutLabel" layoutX="843.0" layoutY="370.0" text="0.00" textAlignment="RIGHT">
+            <font>
+                <Font name="Arial Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="tipOption1" layoutX="639.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#tipOption1" text="10 %" />
+        <Button fx:id="tipOption2" layoutX="697.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#tipOption2" text="15%" />
+        <Button fx:id="tipOption3" layoutX="751.0" layoutY="373.0" mnemonicParsing="false" onMouseClicked="#tipOption3" text="20%" />
+    </children>
+</Pane>

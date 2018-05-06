@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="adminGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" />
+    <ColumnConstraints hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints fillHeight="false" valignment="TOP" vgrow="NEVER" />
+      <RowConstraints maxHeight="471.0" minHeight="140.0" prefHeight="408.6019592285156" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="331.0" minHeight="0.0" prefHeight="272.3980407714844" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <MenuBar fx:id="menuBar" GridPane.columnSpan="2">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#logOut" text="Sign Out" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="2" GridPane.rowIndex="1" GridPane.rowSpan="2">
+        <tabs>
+          <Tab fx:id="employeesTab" onSelectionChanged="#loadEmployeesTab" text="Employees">
+               <content>
+                  <AnchorPane fx:id="employeesPane" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+          </Tab>
+          <Tab fx:id="floorsTab" onSelectionChanged="#loadFloorsTab" text="Floors">
+               <content>
+                  <AnchorPane fx:id="floorsPane" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+          </Tab>
+            <Tab fx:id="menusBar" onSelectionChanged="#loadMenusTab" text="Menus">
+               <content>
+                  <AnchorPane fx:id="menusPane" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="ordersTab" onSelectionChanged="#loadOrdersTab" text="Orders">
+               <content>
+                  <AnchorPane fx:id="ordersPane" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab fx:id="inventoryTab" onSelectionChanged="#loadInventoryTab" text="Inventory">
+               <content>
+                  <AnchorPane fx:id="inventoryPane" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</GridPane>

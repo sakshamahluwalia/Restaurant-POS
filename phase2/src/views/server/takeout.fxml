@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="712.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OrderTypeController">
+   <children>
+      <Label layoutX="13.0" layoutY="52.0" text="Server:">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="serverName" layoutX="117.0" layoutY="55.0" prefHeight="27.0" prefWidth="296.0" text="Name">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <ListView fx:id="allOrders" layoutX="14.0" layoutY="92.0" prefHeight="436.0" prefWidth="677.0" />
+      <Label layoutX="13.0" layoutY="10.0" text="Menu:">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="27.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#addOrder" prefHeight="150.0" prefWidth="200.0" text="Add&#10;Order" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="23.0" />
+         </font>
+      </Button>
+      <Button layoutX="253.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#cancelOrder" prefHeight="150.0" prefWidth="200.0" text="Cancel&#10;Order" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="collectPayement" layoutX="478.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#collectPayment" prefHeight="150.0" prefWidth="200.0" text="Collect &#10;Payment" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="23.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="menuChoiceBox" layoutX="117.0" layoutY="15.0" prefWidth="150.0" />
+   </children>
+</Pane>

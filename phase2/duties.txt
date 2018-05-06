@@ -1,0 +1,14 @@
+Saksham Ahluwalia:
+- Designed the Login GUI and created the password management system for logging in
+- Implemented Serializer which handles serialization and deserialization
+- Added javadoc for all files that did not have documentation
+
+Eric Yuan:
+- Designed all the .fxml files using SceneBuilder
+- Implemented all features in the admin tab
+- Implemented Alert which displays alert messages when text is passed in
+
+Patrick Calleja:
+- Created the UML diagram
+- Implemented the Logging functionality
+- Implemented the functionality of BillController which handles splitting payment and calculating gratuity and tax

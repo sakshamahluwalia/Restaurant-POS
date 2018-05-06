@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="receiverGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReceiverController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="761.9381103515625" minWidth="10.0" prefWidth="740.8897705078125" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="761.9381103515625" minWidth="10.0" prefWidth="740.8897705078125" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="761.9381103515625" minWidth="10.0" prefWidth="740.8897705078125" />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="542.4417572021484" minHeight="0.0" prefHeight="542.4417572021484" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="60.0" minHeight="60.0" prefHeight="60.0" valignment="CENTER" vgrow="NEVER" />
+      <RowConstraints fillHeight="false" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" valignment="CENTER" vgrow="NEVER" />
+    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="inventoryTable" editable="true" prefHeight="472.0" prefWidth="468.0" GridPane.columnSpan="3" GridPane.rowSpan="5">
+        <columns>
+          <TableColumn fx:id="ingredientColumn" editable="false" prefWidth="747.3240025043488" text="Ingredient" />
+          <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="496.67596435546875" text="Quantity" />
+        </columns>
+      </TableView>
+   </children>
+</GridPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.AddCategoryController">
+   <children>
+      <TextField fx:id="categoryName" layoutX="10.0" layoutY="14.0" prefHeight="35.0" prefWidth="180.0" promptText="Enter a category">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="10.0" layoutY="56.0" mnemonicParsing="false" onMouseClicked="#addCategory" prefHeight="35.0" prefWidth="180.0" text="Add Category">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

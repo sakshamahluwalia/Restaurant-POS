@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="menusAnchorPane" prefHeight="738.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.admin.MenusTabController">
+   <children>
+      <Label layoutX="773.0" layoutY="156.0" text="Item Ingredients">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="selectedItemIngredients" layoutX="774.0" layoutY="182.0" prefHeight="180.0" prefWidth="375.0">
+         <columns>
+            <TableColumn fx:id="selectedIngredient" prefWidth="238.0980224609375" text="Ingredient" />
+            <TableColumn fx:id="selectedIngredientQuantity" prefWidth="117.90200805664062" text="Quantity" />
+         </columns>
+      </TableView>
+      <TextField fx:id="selectedItemCategory" alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="535.0" layoutY="242.0" pickOnBounds="false" prefHeight="27.0" promptText="N/A">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="406.0" layoutY="79.0" text="Select Menu">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="selectedItemPrice" alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="535.0" layoutY="333.0" pickOnBounds="false" prefHeight="27.0" promptText="N/A">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="selectedItemName" alignment="TOP_LEFT" editable="false" focusTraversable="false" layoutX="535.0" layoutY="157.0" pickOnBounds="false" prefHeight="27.0" promptText="N/A">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <ListView fx:id="menusList" layoutY="42.0" onKeyPressed="#removeMenu" prefHeight="508.0" prefWidth="355.0" />
+      <TextField fx:id="menuName" layoutY="3.0" onKeyPressed="#addMenu" onMouseClicked="#clearViewArea" prefHeight="36.0" prefWidth="355.0" promptText="Enter a menu name">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
+      <Button layoutY="550.0" mnemonicParsing="false" onMouseClicked="#openCreateMenuItem" prefHeight="188.0" prefWidth="355.0" text="Create Menu Item">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="404.0" layoutY="27.0" text="View Menu Item">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="selectedMenu" layoutX="406.0" layoutY="101.0" prefHeight="27.0" prefWidth="196.0" />
+      <ChoiceBox fx:id="selectedItem" layoutX="630.0" layoutY="101.0" prefHeight="27.0" prefWidth="215.0" />
+      <Label layoutX="630.0" layoutY="79.0" text="Select Menu Item">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="160.0" text="Item Name">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="245.0" text="Item Category">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="336.0" text="Item Price">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="pieChart" layoutX="440.0" layoutY="386.0" prefHeight="329.0" prefWidth="747.0" />
+   </children>
+</AnchorPane>

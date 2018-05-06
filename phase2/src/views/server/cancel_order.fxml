@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CancelOrderController">
+   <children>
+      <ChoiceBox fx:id="customers" layoutX="13.0" layoutY="56.0" onMouseEntered="#handleMouseClick" prefHeight="26.0" prefWidth="276.0" />
+      <Label layoutX="13.0" layoutY="24.0" text="Customer">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+      <ListView fx:id="orders" layoutX="12.0" layoutY="128.0" prefHeight="316.0" prefWidth="276.0" />
+      <Label layoutX="12.0" layoutY="93.0" prefHeight="35.0" prefWidth="99.0" text="Orders">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="cancel" layoutX="86.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#cancelOrder" prefHeight="35.0" prefWidth="131.0" text="Cancel Order" />
+   </children>
+</Pane>

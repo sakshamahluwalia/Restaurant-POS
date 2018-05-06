@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="serverGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ServerController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1075.2392120361328" minWidth="10.0" prefWidth="943.376708984375" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="275.0" />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="640.5001831054688" minHeight="419.62542724609375" prefHeight="450.2490234375" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="180.99786376953125" minHeight="0.0" prefHeight="43.7509765625" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <Label text="Server" GridPane.columnIndex="1" GridPane.columnSpan="2">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </Label>
+      <TableView fx:id="orders" prefHeight="200.0" prefWidth="200.0" GridPane.rowSpan="5">
+         <columns>
+            <TableColumn fx:id="ordersOrder" prefWidth="105.0" text="Order" />
+            <TableColumn fx:id="ordersSeen" prefWidth="65.0" text="Seen" />
+            <TableColumn fx:id="ordersCooked" maxWidth="75.0" minWidth="60.0" prefWidth="65.0" text="Cooked" />
+            <TableColumn fx:id="ordersServed" maxWidth="75.0" minWidth="60.0" prefWidth="65.0" text="Served" />
+         </columns>
+      </TableView>
+      <ListView fx:id="orderType" onMouseClicked="#updateOrderTypeGridPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowSpan="3" />
+      <Button mnemonicParsing="false" onMouseClicked="#openAddTable" prefHeight="60.0" prefWidth="295.0" text="Add Table" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onMouseClicked="#addTakeOut" prefHeight="60.0" prefWidth="295.0" text="Add Takeout" GridPane.columnIndex="2" GridPane.rowIndex="4">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="orderTypePane" prefHeight="904.0" prefWidth="705.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+   </children>
+</GridPane>

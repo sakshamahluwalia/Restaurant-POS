@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="serverGrid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.manager.ManagerController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1075.2392120361328" minWidth="10.0" prefWidth="943.376708984375" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="275.0" prefWidth="275.0" />
+      <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="28.0" minHeight="28.0" prefHeight="28.0" valignment="TOP" vgrow="NEVER" />
+    <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="640.5001831054688" minHeight="419.62542724609375" prefHeight="450.2490234375" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="180.99786376953125" minHeight="0.0" prefHeight="43.7509765625" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints fillHeight="false" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" valignment="CENTER" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <MenuBar GridPane.columnSpan="4">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#openServerScreen" text="Open Server Screen" />
+                  <MenuItem mnemonicParsing="false" onAction="#openInventoryScreen" text="Open Inventory Screen" />
+                  <MenuItem mnemonicParsing="false" onAction="#openCheckServer" text="Check Server" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewRequests" text="View Requests" />
+              <MenuItem mnemonicParsing="false" onAction="#logOut" text="Sign Out" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="viewPane" prefHeight="800.0" prefWidth="705.0" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="5" />
+   </children>
+</GridPane>
