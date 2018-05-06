@@ -21,4 +21,6 @@ This will launch the application.
 
 ## Authors
 
+* **Eric Yuan** - *Initial work* - [ewyuan](https://github.com/ewyuan)
+* **Patrick Calleja** - *Initial work* - [CallejaGit](https://github.com/CallejaGit)
 * **Saksham Ahluwalia** - *Initial work* - [sakshamahluwalia](https://github.com/sakshamahluwalia)
